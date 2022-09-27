@@ -1,0 +1,1 @@
+# Setup Kubernetes with Kubeadm (2 Nodes, 1 Control Plane)
