@@ -1,2 +1,2 @@
-# learn-kubernetes
+# Learn Kubernetes
 Learning resources for Kubernetes

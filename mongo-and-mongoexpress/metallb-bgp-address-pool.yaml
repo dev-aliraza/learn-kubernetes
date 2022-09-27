@@ -1,0 +1,9 @@
+apiVersion: metallb.io/v1beta1
+kind: AddressPool
+metadata:
+  name: default
+  namespace: metallb-system
+spec:
+  protocol: bgp
+  addresses:
+  - 192.168.100.208/28
