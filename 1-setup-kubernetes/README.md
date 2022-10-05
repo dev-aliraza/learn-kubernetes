@@ -86,6 +86,18 @@ echo \
 - sudo apt install -y containerd.io
 - sudo systemctl enable containerd
 ```
+4) Add default configuration
+```
+containerd config default > /etc/containerd/config.toml
+```
+5) if you want to use `systemd` as cgroup driver for container runtime, make `SystemdCgroup` configuration variable to `true` in `/etc/containerd/config.toml`
+```
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  ...
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    ...
+    SystemdCgroup = true
+```
 ## Step 6(A): Initialize Kubernetes Cluster
 Run following command to initialize kubernetes cluster _(Run this command only on `Master or Manager or Control Plane` Node(s))_
 ```
